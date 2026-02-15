@@ -1,15 +1,63 @@
-This is source code of BOBJ exporter add-on for **Blender 2.7.\***. **BOBJ** is an extension of OBJ format that provides also vertex weights, armature information and bone animations (in form of keyframes). It's used by [S&B Minecraft mod](https://github.com/mchorse/snb).
+# Blockbuster OBJ (.bobj)
 
-This add-on is based (i.e. modified to suit my format needs) on the bundled `io_scene_obj` Blender add-on (written by Campbell Barton and Bastien Montagne) which is under **GPL license** (see Python source code for license header). To comply with GPL license, the list of changes from the original source code is available in `CHANGES.md`. 
+BOBJ is an extended version of the OBJ format that supports:
 
-## Installing for 2.7\*
+- Vertex weights  
+- Armature (bone) data  
+- Bone animations (keyframes)  
 
-To install this add-on, download [this](https://github.com/mchorse/io_export_bobj/releases/download/0.1-2.7/io_export_bobj.zip) file, open Blender 2.7.\*, File > User Preferences > Add-ons > **Install Add-on From File...** and pick the ZIP you downloaded in Blender's file browser.
+It is mainly used by the **[S&B](https://github.com/mchorse/snb)** And **[BBS Mod](https://github.com/mchorse/bbs-mod)** Minecraft mod.
 
-After that, the exporter menu item should be available under File > Export. If it's not, make sure **that the add-on is enabled** in Add-ons tab of User Preferences!
+---
 
-## Installing for 2.8+
+## About
 
-To install this add-on, download [this](https://github.com/mchorse/io_export_bobj/releases/download/0.1-2.8/io_export_bobj.zip) file, open Blender 2.8+, Edit > Preferences > Add-ons > **Install...** and pick the ZIP you downloaded in Blender's file browser. Once the add-on will appear in the list, enable it.
+This add-on was originally created by **[McHorse](https://github.com/mchorse),** and based on Blender’s bundled `io_scene_obj` add-on (GPL licensed).
 
-After that, the exporter menu item should be available under File > Export. If it's not, make sure **that the add-on is enabled** in Add-ons tab of User Preferences!
+I did NOT create the original exporter.
+
+What was added/changed:
+
+- Added full **BOBJ import support**
+- Added extra improvements and fixes
+- Updated the add-on to properly work with **Blender 4.1**
+
+Original creator: **[McHorse](https://github.com/mchorse),**  
+Updated & extended for Blender 4.1: **[Eleeter](https://github.com/Eleeterlary)**
+
+---
+## New Features & Updates
+
+- Full BOBJ Importer: You can now bring .bobj files back into Blender. It restores the 3D model, the bones, the vertex groups, and the animations.
+- Blender 4.1+ Updated: the code to work with Blender 4.1's new way of handling "normals" so your models look right.
+- Quaternion to Euler (XYZ): Added a checkbox to turn rotation data into simple XYZ math that Minecraft understands better. **You don't need to use the Rigify plugin anymore.**
+- Auto Texture Export: The script can now automatically paste the texture to the folder where you save your model.
+
+---
+
+## Installation (Blender 4.1+)
+
+Open Blender.
+
+- Go to Edit > Preferences > Add-ons.
+
+- Click Install...
+
+- Select the downloaded file.
+
+- Check the box for Blockbuster OBJ (.bobj).
+
+---
+## Once enabled, you will see the options under:
+
+- **File > Import > Blockbuster OBJ (.bobj)**
+- **File > Export > Blockbuster OBJ (.bobj)**
+
+### If it does not appear, make sure the add-on is enabled in the Add-ons list.
+---
+
+License
+- This add-on is based on Blender’s original code and is licensed under the GPL.
+
+- The source code includes the license header.
+---
